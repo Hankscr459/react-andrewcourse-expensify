@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
 import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import {polyfill} from 'react-lifecycles-compat';
 
 export class ExpenseListFilters extends React.Component {
     state = {
@@ -54,6 +55,7 @@ export class ExpenseListFilters extends React.Component {
     }
 }
 
+polyfill(ExpenseListFilters);
 
 const mapStateToProps = (state) => ({
     filters: state.filters
