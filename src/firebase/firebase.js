@@ -7,15 +7,17 @@ const config = {
     projectId: process.env.FIREBASE_PROJECT_ID,
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    // appId: "1:24480641406:web:eb5d668c045e69acc6032f",
-    // measurementId: "G-ETLSL986J9"
 };
 
 
 firebase.initializeApp(config);
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
+
+
+
 // database.ref('expenses').on('child_removed', (snapshot) => {
 //     console.log(snapshot.key, snapshot.val());
 // });
