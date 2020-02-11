@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseListItem correctly 1`] = `
-<div>
-  <[object Object]
-    to="/edit/1"
-  >
-    <h3>
+<[object Object]
+  className="list-item"
+  to="/edit/1"
+>
+  <div>
+    <h3
+      classNmae="list-item__title"
+    >
       Gum
     </h3>
-  </[object Object]>
-  <p>
+    <span
+      classNmae="list-item__sub-title"
+    >
+      1970, January 1st
+    </span>
+  </div>
+  <h3>
     $1.95
-    -
-    1970, January 1st
-  </p>
-</div>
+  </h3>
+</[object Object]>
 `;
